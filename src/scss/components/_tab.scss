@@ -1,7 +1,11 @@
 .tab {
-  @apply w-40 py-2;
+  @apply mx-4 lg:mx-10;
 }
 
 .tab-button {
-  @apply text-sm font-semibold text-333333;
+  @apply py-2 text-sm font-semibold text-333333 hover:text-2F80ED;
+}
+
+.current-tab {
+  @apply border-b-4 border-b-2F80ED;
 }

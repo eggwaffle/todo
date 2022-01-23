@@ -17,11 +17,11 @@
 }
 
 .bar-input {
-  @apply col-span-3 py-5 pl-3 border border-BDBDBD rounded-xl text-sm placeholder-828282;
+  @apply col-span-3 py-5 pl-3 border border-BDBDBD active:outline-2F80ED rounded-xl text-sm placeholder-828282;
 }
 
 .bar-button {
-  @apply px-10 py-5 bg-2F80ED rounded-xl font-semibold text-sm text-white;
+  @apply px-4 lg:px-10 py-5 bg-2F80ED rounded-xl font-semibold text-sm text-white;
 }
 
 .footer {
@@ -29,11 +29,15 @@
 }
 
 .tab {
-  @apply w-40 py-2;
+  @apply mx-4 lg:mx-10;
 }
 
 .tab-button {
-  @apply text-sm font-semibold text-333333;
+  @apply py-2 text-sm font-semibold text-333333 hover:text-2F80ED;
+}
+
+.current-tab {
+  @apply border-b-4 border-b-2F80ED;
 }
 
 .tab-list {

@@ -1,4 +1,4 @@
-function Bar() {
+function Bar(props) {
   return (
     <section className="bar">
       <input
@@ -8,6 +8,7 @@ function Bar() {
       />
       <button
       className="bar-button"
+      onClick={() => props.addToDo}
       >
         Add
       </button>
