@@ -3,9 +3,9 @@
 }
 
 .bar-input {
-  @apply col-span-3 py-5 pl-3 border border-BDBDBD rounded-xl text-sm placeholder-828282;
+  @apply col-span-3 py-5 pl-3 border border-BDBDBD active:outline-2F80ED rounded-xl text-sm placeholder-828282;
 }
 
 .bar-button {
-  @apply px-10 py-5 bg-2F80ED rounded-xl font-semibold text-sm text-white;
+  @apply px-4 lg:px-10 py-5 bg-2F80ED rounded-xl font-semibold text-sm text-white;
 }

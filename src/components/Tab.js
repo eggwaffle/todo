@@ -1,8 +1,18 @@
 function Tab(props) {
+  let currentTabClass = `current-tab`;
+  if (props.currentTab === props.content) {
+    console.log(props.content)
+    currentTabClass = `current-tab`;
+  } else {
+    currentTabClass = ``;
+  }
   return (
     <div>
-      <section className="tab">
-        <button className="tab-button">
+      <section className={`tab ${currentTabClass}`}>
+        <button
+          className={`tab-button`}
+          onClick={props.onClick}
+        >
           {props.content}
         </button>
       </section>

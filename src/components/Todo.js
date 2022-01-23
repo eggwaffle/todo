@@ -4,9 +4,11 @@ function Todo(props) {
       <input
         className="todo-checkbox"
         type="checkbox"
+        onChange={props.setChecked}
+        onClick={() => console.log(props.checked)}
       />
       <p className="todo-text">
-        {`Do coding challenges`}
+        {props.content}
       </p>
     </div>
   );
