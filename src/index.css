@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* In the project folder, run 'sass src/index.scss:src/index.css --source-map -w' */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap");
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+  @apply min-h-screen flex flex-col justify-center items-center text-center font-montserrat;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App-header {
+  @apply font-raleway font-bold text-4xl text-333333;
 }
+
+.footer {
+  @apply mt-8 font-montserrat text-sm text-center text-A9A9A9;
+}
+
+.tab {
+  @apply w-40 py-2;
+}
+
+.tab-button {
+  @apply text-sm font-semibold text-333333;
+}
+
+.tab-list {
+  @apply flex border-b border-b-BDBDBD;
+}
+
+/*# sourceMappingURL=index.css.map */
