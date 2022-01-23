@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Bar from './Bar';
+import List from './List';
 import TabList from './TabList';
 
 function Main() {
@@ -8,6 +10,8 @@ function Main() {
       <TabList
         tab = {tab}
       />
+      <Bar />
+      <List />
     </div>
   );
 }

@@ -5,15 +5,27 @@
 @tailwind components;
 @tailwind utilities;
 .App {
-  @apply min-h-screen flex flex-col justify-center items-center text-center font-montserrat;
+  @apply relative min-h-screen flex flex-col items-center text-center font-montserrat;
 }
 
 .App-header {
-  @apply font-raleway font-bold text-4xl text-333333;
+  @apply mt-8 font-raleway font-bold text-4xl text-333333;
+}
+
+.bar {
+  @apply grid grid-cols-4 gap-6;
+}
+
+.bar-input {
+  @apply col-span-3 py-5 pl-3 border border-BDBDBD rounded-xl text-sm placeholder-828282;
+}
+
+.bar-button {
+  @apply px-10 py-5 bg-2F80ED rounded-xl font-semibold text-sm text-white;
 }
 
 .footer {
-  @apply mt-8 font-montserrat text-sm text-center text-A9A9A9;
+  @apply fixed bottom-6 font-montserrat text-sm text-center text-A9A9A9;
 }
 
 .tab {

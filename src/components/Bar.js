@@ -1,8 +1,17 @@
 function Bar() {
   return (
-    <div>
-
-    </div>
+    <section className="bar">
+      <input
+        className="bar-input"
+        type="text"
+        placeholder="add details"
+      />
+      <button
+      className="bar-button"
+      >
+        Add
+      </button>
+    </section>
   );
 }
 
