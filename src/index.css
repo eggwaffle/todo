@@ -41,7 +41,19 @@
 }
 
 .tab-list {
-  @apply flex border-b border-b-BDBDBD;
+  @apply my-5 grid grid-cols-3 border-b border-b-BDBDBD;
+}
+
+.todo {
+  @apply py-7 flex items-center;
+}
+
+.todo-checkbox {
+  @apply mr-1;
+}
+
+.todo-text {
+  @apply text-lg font-medium;
 }
 
 /*# sourceMappingURL=index.css.map */
