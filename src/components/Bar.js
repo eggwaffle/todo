@@ -8,7 +8,7 @@ function Bar(props) {
       />
       <button
       className="bar-button"
-      onClick={() => props.addToDo}
+      onClick={props.addTodo}
       >
         Add
       </button>

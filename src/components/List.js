@@ -1,21 +1,24 @@
-import { useEffect, useState } from "react";
+import {useState} from 'react';
 import Todo from "./Todo";
 
 function List(props) {
-  const [checked, setChecked] = useState(props.completed);
+  const [checked, setChecked] = useState(false);
+  const handlechange = () => {
+    setChecked(!checked);
+  }
 
-  const todoList = props.todoList.map ((todo) =>
+  const list = props.todoList.map ((todo) =>
     <Todo
       key={todo.id}
       content={todo.content}
       completed={todo.completed}
-      checked={checked}
-      setChecked={setChecked}
+      onChange={handlechange}
     />
   )
+
   return (
     <div>
-      {todoList}
+      {list}
     </div>
   );
 }

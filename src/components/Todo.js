@@ -4,8 +4,7 @@ function Todo(props) {
       <input
         className="todo-checkbox"
         type="checkbox"
-        onChange={props.setChecked}
-        onClick={() => console.log(props.checked)}
+        onChange={props.onChange}
       />
       <p className="todo-text">
         {props.content}
