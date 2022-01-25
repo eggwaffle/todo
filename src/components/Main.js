@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Bar from './Bar';
 import List from './List';
 import TabList from './TabList';
@@ -10,18 +10,28 @@ function Main() {
   }, []);
   const [todoList, setTodoList] = useState(localStorage.getItem('todos'));
   */
+
   const [todoList, setTodoList] = useState([]);
-  let arr =todoList;
-  const newElement = {
-    "id": Date.now(),
-    "content": "Do coding challenges",
-    "completed": false
-  }
-  function addTodo() {
+  const arr =todoList;
+
+  function addTodo(newElement) {
     arr.push(newElement);
     setTodoList(arr => [...arr])
-    console.log(todoList)
     //localStorage.setItem('todos', todoList)
+  }
+
+  const handlechange = (id, completed) => {
+    console.log(todoList.find(element => element.id === id))
+    completed = !(completed)
+    arr.map(element => {
+      if (element.id === id) {
+        element.completed = completed;
+      }
+      return element;
+    })
+    setTodoList(arr => [...arr])
+    console.log(todoList.find(element => element.id === id))
+    return completed
   }
 
   return (
@@ -36,6 +46,7 @@ function Main() {
       />
       <List
         todoList={todoList}
+        handlechange={handlechange}
       />
     </div>
   );
