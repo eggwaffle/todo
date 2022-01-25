@@ -3,9 +3,13 @@
 }
 
 .todo-checkbox {
-  @apply mr-1;
+  @apply mr-1 w-6 h-6;
 }
 
 .todo-text {
   @apply text-lg font-medium;
+}
+
+.todo-text.completed {
+  @apply text-333333 line-through;
 }
