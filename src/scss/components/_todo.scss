@@ -1,5 +1,9 @@
+.todo-container {
+  @apply py-1 md:py-2 xl:py-4 flex justify-between items-center;
+}
+
 .todo {
-  @apply py-1 md:py-2 xl:py-4 flex items-center;
+  @apply flex;
 }
 
 .todo-checkbox {
@@ -12,4 +16,8 @@
 
 .todo-text.completed {
   @apply text-333333 line-through;
+}
+
+.delete {
+  @apply text-BDBDBD;
 }
