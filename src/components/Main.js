@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Bar from './Bar';
 import List from './List';
 import TabList from './TabList';
@@ -9,9 +9,15 @@ function Main() {
     localStorage.setItem('todos', [])
   }, []);
   const [todoList, setTodoList] = useState(localStorage.getItem('todos'));
+
+    useEffect(() => {
+    setFilteredList(todoList)
+  }, [todoList]);
+
   */
 
   const [todoList, setTodoList] = useState([]);
+  const [currentTab, setCurrentTab] = useState("All");
   const arr =todoList;
 
   function addTodo(newElement) {
@@ -37,6 +43,8 @@ function Main() {
   return (
     <div>
       <TabList
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
         todoList={todoList}
       />
       <Bar
@@ -45,6 +53,7 @@ function Main() {
         addTodo={addTodo}
       />
       <List
+        currentTab={currentTab}
         todoList={todoList}
         handlechange={handlechange}
       />
