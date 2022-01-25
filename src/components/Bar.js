@@ -7,7 +7,13 @@ function Bar(props) {
   let newElement = {
     "id": timestamp,
     "content": content,
-    "completed": true
+    "completed": false
+  }
+  function handleClick(newElement) {
+    if (newElement.content) {
+      props.addTodo(newElement);
+      setContent(``);
+    }
   }
 
   return (
@@ -21,10 +27,7 @@ function Bar(props) {
       />
       <button
       className="bar-button"
-      onClick={() => {
-        props.addTodo(newElement);
-        setContent(``);
-      }}
+      onClick={() => handleClick(newElement)}
       >
         Add
       </button>

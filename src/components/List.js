@@ -1,8 +1,19 @@
 import Todo from "./Todo";
 
 function List(props) {
-
-  const list = props.todoList.map ((todo) =>
+  let currentList;
+  switch (props.currentTab) {
+    case "Active":
+      currentList = props.todoList.filter ((todo) => todo.completed === false)
+      break;
+    case "Completed":
+      currentList = props.todoList.filter ((todo) => todo.completed === true)
+      break;
+    default:
+      currentList = props.todoList
+      break;
+  }
+  const list = currentList.map ((todo) =>
     <Todo
       key={todo.id}
       id={todo.id}
@@ -13,7 +24,7 @@ function List(props) {
   )
 
   return (
-    <div>
+    <div className="list">
       {list}
     </div>
   );

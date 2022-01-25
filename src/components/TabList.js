@@ -1,24 +1,23 @@
-import { useState } from 'react';
 import Tab from './Tab';
 
-function TabList() {
-  const [currentTab, setCurrentTab] = useState("All");
+function TabList(props) {
+
   return (
     <section className="tab-list">
       <Tab
         content = "All"
-        currentTab = {currentTab}
-        onClick = {() => setCurrentTab((prev) => prev = "All")}
+        currentTab = {props.currentTab}
+        onClick = {() => props.setCurrentTab((prev) => prev = "All")}
       />
       <Tab
         content = "Active"
-        currentTab = {currentTab}
-        onClick = {() => setCurrentTab((prev) => prev = "Active")}
+        currentTab = {props.currentTab}
+        onClick = {() => props.setCurrentTab((prev) => prev = "Active")}
       />
       <Tab
         content = "Completed"
-        currentTab = {currentTab}
-        onClick = {() => setCurrentTab((prev) => prev = "Completed")}
+        currentTab = {props.currentTab}
+        onClick = {() => props.setCurrentTab((prev) => prev = "Completed")}
       />
     </section>
   );

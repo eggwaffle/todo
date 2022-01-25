@@ -1,7 +1,6 @@
 function Tab(props) {
   let currentTabClass = `current-tab`;
   if (props.currentTab === props.content) {
-    console.log(props.content)
     currentTabClass = `current-tab`;
   } else {
     currentTabClass = ``;
