@@ -26,6 +26,13 @@ function Main() {
     //localStorage.setItem('todos', todoList)
   }
 
+  function handleDelete(deleteElementId) {
+    let newArr = arr;
+    newArr = arr.filter (element => element.id !== deleteElementId)
+    setTodoList([...newArr])
+    //localStorage.setItem('todos', todoList)
+  }
+
   const handlechange = (id, completed) => {
     console.log(todoList.find(element => element.id === id))
     completed = !(completed)
@@ -56,6 +63,7 @@ function Main() {
         currentTab={currentTab}
         todoList={todoList}
         handlechange={handlechange}
+        handleDelete={handleDelete}
       />
     </div>
   );

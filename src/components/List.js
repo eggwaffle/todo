@@ -24,6 +24,7 @@ function List(props) {
       content={todo.content}
       completed={todo.completed}
       onChange={props.handlechange}
+      handleDelete={props.handleDelete}
       isHidden={isHidden}
     />
   )

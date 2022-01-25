@@ -25,7 +25,7 @@ function Todo(props) {
       </div>
       <button
         className={`delete-todo ${props.isHidden ? "hidden" : null}`}
-        onClick={() => console.log("delete")}
+        onClick={() => props.handleDelete(props.id)}
       >
         <span className="material-icons delete">
           delete_outline
