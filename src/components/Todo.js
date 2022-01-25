@@ -3,13 +3,10 @@ import { useState } from "react";
 function Todo(props) {
   const [checked, setChecked] = useState(props.completed);
   let completed = ``;
-  let hidden = ``;
   if (props.completed) {
     completed = `completed`
-    hidden = ``
   } else {
     completed = ``;
-    hidden = `hidden`;
   }
 
   return (
@@ -27,7 +24,7 @@ function Todo(props) {
         </p>
       </div>
       <button
-        className={`delete-todo ${hidden}`}
+        className={`delete-todo ${props.isHidden ? "hidden" : null}`}
         onClick={() => console.log("delete")}
       >
         <span className="material-icons delete">
