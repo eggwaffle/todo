@@ -5,16 +5,16 @@ function List(props) {
   let isHidden;
   switch (props.currentTab) {
     case "Active":
-      currentList = props.todoList.filter ((todo) => todo.completed === false)
-      isHidden = true
+      currentList = props.todoList.filter ((todo) => todo.completed === false);
+      isHidden = true;
       break;
     case "Completed":
-      currentList = props.todoList.filter ((todo) => todo.completed === true)
-      isHidden = false
+      currentList = props.todoList.filter ((todo) => todo.completed === true);
+      (currentList.length > 0) ? isHidden = false : isHidden = true;
       break;
     default:
-      currentList = props.todoList
-      isHidden = true
+      currentList = props.todoList;
+      isHidden = true;
       break;
   }
   const list = currentList.map ((todo) =>
@@ -32,6 +32,17 @@ function List(props) {
   return (
     <div className="list">
       {list}
+      <div className={`delete-all-container ${isHidden ? "hidden" : "flex"}`}>
+        <button
+          className="delete-all"
+          onClick={props.deleteAll}
+        >
+          <span className="material-icons">
+            delete_outline
+          </span>
+          delete all
+        </button>
+      </div>
     </div>
   );
 }

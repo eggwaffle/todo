@@ -1,3 +1,15 @@
 .list {
   @apply pt-5;
 }
+
+.delete-all-container {
+  @apply justify-end;
+}
+
+.delete-all {
+  @apply px-6 py-3 flex items-center rounded bg-EB5757 text-xs text-white;
+}
+
+.delete-all span {
+  @apply text-xs;
+}

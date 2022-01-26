@@ -18,6 +18,6 @@
   @apply text-333333 line-through;
 }
 
-.delete {
-  @apply text-BDBDBD;
+.delete-todo span {
+  @apply flex items-center text-BDBDBD;
 }

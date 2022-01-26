@@ -3,12 +3,26 @@ import { useState } from "react";
 function Bar(props) {
   const [content, setContent] = useState(``);
   const timestamp = Date.now();
+  let isHidden;
+
+  switch (props.currentTab) {
+    case "Active":
+      isHidden = false
+      break;
+    case "Completed":
+      isHidden = true
+      break;
+    default:
+      isHidden = false
+      break;
+  }
 
   let newElement = {
     "id": timestamp,
     "content": content,
     "completed": false
   }
+
   function handleClick(newElement) {
     if (newElement.content) {
       props.addTodo(newElement);
@@ -17,7 +31,7 @@ function Bar(props) {
   }
 
   return (
-    <section className="bar">
+    <section className={`bar ${isHidden ? "hidden" : "grid"}`}>
       <input
         className="bar-input"
         type="text"

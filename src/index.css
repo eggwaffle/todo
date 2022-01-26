@@ -9,7 +9,7 @@
 }
 
 .bar {
-  @apply grid grid-cols-4 gap-6;
+  @apply grid-cols-4 gap-6;
 }
 
 .bar-input {
@@ -30,6 +30,18 @@
 
 .list {
   @apply pt-5;
+}
+
+.delete-all-container {
+  @apply justify-end;
+}
+
+.delete-all {
+  @apply px-6 py-3 flex items-center rounded bg-EB5757 text-xs text-white;
+}
+
+.delete-all span {
+  @apply text-xs;
 }
 
 .tab {
@@ -68,8 +80,8 @@
   @apply text-333333 line-through;
 }
 
-.delete {
-  @apply text-BDBDBD;
+.delete-todo span {
+  @apply flex items-center text-BDBDBD;
 }
 
 /*# sourceMappingURL=index.css.map */
