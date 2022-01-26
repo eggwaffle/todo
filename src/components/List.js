@@ -31,7 +31,7 @@ function List(props) {
 
   return (
     <div className="list">
-      {list}
+      {currentList.length > 0 ? list : null}
       <div className={`delete-all-container ${isHidden ? "hidden" : "flex"}`}>
         <button
           className="delete-all"
