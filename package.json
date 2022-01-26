@@ -1,7 +1,7 @@
 {
   "homepage": "https://front-end-dev-challenges.web.app/todo/",
   "name": "todo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
