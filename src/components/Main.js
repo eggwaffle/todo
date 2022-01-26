@@ -1,42 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Bar from './Bar';
 import List from './List';
 import TabList from './TabList';
 
-function Main() {
-/*
-  useEffect(() => {
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', [])
-      console.log("new todo list")
-    }
-  });
-  const [todoList, setTodoList] = useState(localStorage.getItem('todos'));
-  */
+function Main({todoList, setTodoList}) {
 
-  const [todoList, setTodoList] = useState([]);
   const [currentTab, setCurrentTab] = useState("All");
   const arr = todoList;
 
   function addTodo(newElement) {
     arr.push(newElement);
     setTodoList(arr => [...arr]);
-    //localStorage.setItem('todos', todoList)
+    localStorage.setItem('todos', JSON.stringify(todoList));
   }
 
   function deleteAll() {
-    setTodoList([]);
+    for (let index = arr.length; index > 0; index--) {
+      const element = arr[index - 1];
+      if (element.completed === true) {
+        console.log(element)
+        arr.splice(arr.indexOf(element), 1)
+      }
+    }
+    setTodoList(arr => [...arr]);
+    localStorage.setItem('todos', JSON.stringify(todoList));
+    console.log(todoList)
   }
 
   function handleDelete(deleteElementId) {
-    let newArr = arr;
-    newArr = arr.filter (element => element.id !== deleteElementId)
-    setTodoList([...newArr])
-    //localStorage.setItem('todos', todoList)
+    let deleteElement;
+    deleteElement = arr.find (element => element.id === deleteElementId);
+    arr.splice(arr.indexOf(deleteElement), 1)
+    setTodoList(arr => [...arr]);
+    localStorage.setItem('todos', JSON.stringify(todoList));
   }
 
   function handlechange(id, completed) {
-    //console.log(todoList.find(element => element.id === id))
     completed = !(completed)
     arr.map(element => {
       if (element.id === id) {
@@ -44,8 +43,8 @@ function Main() {
       }
       return element;
     })
-    setTodoList(arr => [...arr])
-    //console.log(todoList.find(element => element.id === id))
+    setTodoList(arr => [...arr]);
+    localStorage.setItem('todos', JSON.stringify(todoList));
     return completed
   }
 
