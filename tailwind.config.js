@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        '0057B7': '#0057B7',
         '2F80ED': '#2F80ED',
         '333333': '#333333',
         '4F4F4F': '#4F4F4F',
@@ -18,6 +19,7 @@ module.exports = {
         'A9A9A9': '#A9A9A9',
         'BDBDBD': '#BDBDBD',
         'F2F2F2': '#F2F2F2',
+        'FFD700': '#FFD700',
         'EB5757': '#EB5757',
       },
       fontFamily: {

@@ -1,0 +1,11 @@
+.Badge {
+  @apply fixed -right-1/3 lg:-right-[40%] xl:-right-[45%] origin-center rotate-45 z-[999] w-full h-10;
+}
+
+.TopBadge {
+  @apply w-full h-1/2 bg-0057B7;
+}
+
+.BottomBadge {
+  @apply w-full h-1/2 bg-FFD700;
+}
