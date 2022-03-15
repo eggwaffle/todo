@@ -21,8 +21,13 @@
 </div>
 
 <div align="center">
+  <img src="https://img.shields.io/badge/Create%20React%20App-brightgreen?style=for-the-badge" alt="Create React App" />
+  <img src="https://img.shields.io/badge/Javascript-yellow?style=for-the-badge" alt="Javascript" />
+  <img src="https://img.shields.io/badge/TailwindCSS-blue?style=for-the-badge" alt="TailwindCSS" />
+  <img src="https://img.shields.io/badge/SASS-red?style=for-the-badge" alt="SASS" />
+
   <a href="https://war.ukraine.ua">
-    <img src="https://img.shields.io/badge/Support%20Ukraine-Now-ffd700?labelColor=0057b7" alt="Support Ukraine Badge" />
+    <img src="https://img.shields.io/badge/Stand%20Wtih-Ukraine-ffd700?labelColor=0057b7&style=for-the-badge" alt="Stand with Ukraine Badge" />
   </a>
 </div>
 
